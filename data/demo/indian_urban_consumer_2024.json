@@ -1,0 +1,135 @@
+{
+  "dataset_metadata": {
+    "name": "Indian Urban Consumer Survey 2024",
+    "version": "2024.2-Q3",
+    "dataset_id": "DS-IND-URBAN-2024",
+    "sample_size": 1200,
+    "geography": "India (Tier 1 & Tier 2 Metros)",
+    "collection_period": "January 2024 - June 2024",
+    "fidelity_confidence": 0.96,
+    "provenance": "EMPIRICAL",
+    "description": "Stratified random sample of 1,200 urban consumers across 8 metropolitan hubs assessing digital health, AI tools, subscription willingness, and price sensitivity."
+  },
+  "demographic_distributions": {
+    "age_distribution": [
+      {"range": "18-24", "percentage": 0.22, "mean": 21.5, "std": 1.8},
+      {"range": "25-34", "percentage": 0.44, "mean": 29.2, "std": 2.6},
+      {"range": "35-44", "percentage": 0.21, "mean": 39.0, "std": 2.8},
+      {"range": "45-54", "percentage": 0.09, "mean": 48.8, "std": 2.5},
+      {"range": "55+", "percentage": 0.04, "mean": 60.1, "std": 3.4}
+    ],
+    "city_distribution": [
+      {"city": "Bengaluru", "tier": "Tier-1", "weight": 0.24},
+      {"city": "Mumbai", "tier": "Tier-1", "weight": 0.22},
+      {"city": "Delhi-NCR", "tier": "Tier-1", "weight": 0.20},
+      {"city": "Hyderabad", "tier": "Tier-1", "weight": 0.12},
+      {"city": "Pune", "tier": "Tier-1", "weight": 0.09},
+      {"city": "Chennai", "tier": "Tier-1", "weight": 0.07},
+      {"city": "Ahmedabad", "tier": "Tier-2", "weight": 0.03},
+      {"city": "Kolkata", "tier": "Tier-2", "weight": 0.03}
+    ],
+    "income_brackets_monthly_inr": [
+      {"bracket": "< ₹40,000", "weight": 0.14, "median": 32000},
+      {"bracket": "₹40,000 - ₹80,000", "weight": 0.38, "median": 58000},
+      {"bracket": "₹80,000 - ₹1,50,000", "weight": 0.31, "median": 110000},
+      {"bracket": "₹1,50,000 - ₹2,50,000", "weight": 0.12, "median": 190000},
+      {"bracket": "> ₹2,50,000", "weight": 0.05, "median": 320000}
+    ],
+    "education_levels": [
+      {"level": "Bachelors", "weight": 0.58},
+      {"level": "Masters / Postgraduate", "weight": 0.34},
+      {"level": "Doctorate / Specialized", "weight": 0.04},
+      {"level": "High School / Diploma", "weight": 0.04}
+    ],
+    "tech_literacy_mean": 0.76,
+    "tech_literacy_std": 0.18
+  },
+  "segments": [
+    {
+      "segment_id": "SEG-01",
+      "name": "Fitness Enthusiasts",
+      "prevalence": 0.32,
+      "price_sensitivity": {"mean": 0.38, "std": 0.14},
+      "quality_sensitivity": {"mean": 0.88, "std": 0.09},
+      "brand_loyalty": {"mean": 0.65, "std": 0.15},
+      "innovation_affinity": {"mean": 0.82, "std": 0.12},
+      "risk_aversion": {"mean": 0.32, "std": 0.11},
+      "willingness_to_pay_median_inr": 2499,
+      "churn_propensity": 0.18
+    },
+    {
+      "segment_id": "SEG-02",
+      "name": "Busy Professionals",
+      "prevalence": 0.43,
+      "price_sensitivity": {"mean": 0.48, "std": 0.16},
+      "quality_sensitivity": {"mean": 0.79, "std": 0.11},
+      "brand_loyalty": {"mean": 0.52, "std": 0.18},
+      "innovation_affinity": {"mean": 0.71, "std": 0.14},
+      "risk_aversion": {"mean": 0.44, "std": 0.13},
+      "willingness_to_pay_median_inr": 1899,
+      "churn_propensity": 0.27
+    },
+    {
+      "segment_id": "SEG-03",
+      "name": "Price-Sensitive Beginners",
+      "prevalence": 0.25,
+      "price_sensitivity": {"mean": 0.84, "std": 0.10},
+      "quality_sensitivity": {"mean": 0.52, "std": 0.15},
+      "brand_loyalty": {"mean": 0.31, "std": 0.19},
+      "innovation_affinity": {"mean": 0.45, "std": 0.18},
+      "risk_aversion": {"mean": 0.72, "std": 0.12},
+      "willingness_to_pay_median_inr": 999,
+      "churn_propensity": 0.46
+    }
+  ],
+  "category_benchmarks": {
+    "reference_price_inr": 1999,
+    "current_status_quo_satisfaction": 0.54,
+    "top_reasons_for_churn": [
+      {"reason": "Lack of personalized feedback", "percentage": 0.38},
+      {"reason": "Price too high relative to perceived utility", "percentage": 0.31},
+      {"reason": "Inconsistent habit formation mechanics", "percentage": 0.19},
+      {"reason": "Switched to free YouTube/generic fitness trackers", "percentage": 0.12}
+    ],
+    "social_influence_mean": 0.62,
+    "social_influence_std": 0.19
+  },
+  "historical_launches": [
+    {
+      "launch_id": "HIST-LAUNCH-X-2024",
+      "name": "FitAI Pro Launch (Q1 2024)",
+      "geography": "Urban India (Tier-1)",
+      "sample_cohort_size": 2500,
+      "offered_price_inr": 1799,
+      "actual_day30_adoption_rate": 0.312,
+      "actual_day30_churn_rate": 0.218,
+      "actual_intent_score": 0.684,
+      "predicted_metrics_swarmiq": {
+        "predicted_adoption_rate": 0.294,
+        "predicted_churn_rate": 0.231,
+        "predicted_intent_score": 0.669,
+        "mae": 0.018,
+        "mape": 0.057,
+        "rmse": 0.021
+      }
+    },
+    {
+      "launch_id": "HIST-LAUNCH-Y-2023",
+      "name": "NutriTrack Live (Q3 2023)",
+      "geography": "Bengaluru & Mumbai",
+      "sample_cohort_size": 1800,
+      "offered_price_inr": 1299,
+      "actual_day30_adoption_rate": 0.405,
+      "actual_day30_churn_rate": 0.310,
+      "actual_intent_score": 0.722,
+      "predicted_metrics_swarmiq": {
+        "predicted_adoption_rate": 0.419,
+        "predicted_churn_rate": 0.298,
+        "predicted_intent_score": 0.741,
+        "mae": 0.014,
+        "mape": 0.035,
+        "rmse": 0.017
+      }
+    }
+  ]
+}
